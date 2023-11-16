@@ -369,7 +369,7 @@ h3,
 h4,
 h5,
 h6 {
-  font-family: 'JetBrains Mono', monospace;
+  font-family: 'Poppins', sans-serif;
   margin: 0 0 0.5rem;
   line-height: 1.25;
 }
@@ -899,7 +899,12 @@ a:hover {
 }
 
 .text-light {
-  color: #d9e9e8 !important;
+  color: black !important;
+  font-family: 'Poppins', sans-serif !important;
+  text-decoration: none !important;
+  text-transform: uppercase !important;
+  text-align: center !important;
+
 }
 
 .text-dark {
@@ -919,9 +924,7 @@ a:hover {
 }
 
 /* BACKGROUND UTILS */
-.bg-primary {
-  background-color: #2d3e50 !important;
-}
+
 
 .bg-info {
   background-color: #1bbc9b !important;
@@ -1030,21 +1033,21 @@ a:hover {
 }
 
 .btn.btn-info {
-  background-color: #1bbc9b;
+  background-color: blue;
   color: #ffffff;
 }
 
 .btn.btn-info:hover {
-  background-color: #31e1bd;
+  background-color: darkgray;
 }
 
 .btn.btn-light {
-  background-color: #d9e9e8;
-  color: #1a1a1a;
+  background-color: blue;
+  color: #ffffff;
 }
 
 .btn.btn-light:hover {
-  background-color: #84b8b4;
+  background-color: #5f5f5f;
 }
 
 .btn.btn-dark {
