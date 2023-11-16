@@ -28,7 +28,7 @@ function PhotographerType() {
         <input
           type="text"
           name="photographerType"
-          placeholder="Photographer Type"
+          placeholder="Picture"
           value={photographerType}
           className="form-input w-100"
           style={{ lineHeight: '1.5' }}
@@ -37,7 +37,7 @@ function PhotographerType() {
         <input
           type="text"
           name="album"
-          placeholder="Album"
+          placeholder="Photographer"
           value={album}
           className="form-input w-100"
           style={{ lineHeight: '1.5' }}
@@ -45,10 +45,10 @@ function PhotographerType() {
         />
         <textarea
           name="thoughtText"
-          placeholder="Here's a new thought..."
+          placeholder="Album"
           value={thoughtText}
           className="form-input w-100"
-          style={{ lineHeight: '1.5', resize: 'vertical' }}
+          style={{ lineHeight: '1.5', }}
           onChange={handleChange}
         ></textarea>
         <button type="submit">Submit</button>
