@@ -1,12 +1,13 @@
 import { useQuery } from '@apollo/client';
 
-import ThoughtList from '../components/ThoughtList';
-import ThoughtForm from '../components/ThoughtForm';
+// import ThoughtList from '../components/ThoughtList';
+// import ThoughtForm from '../components/ThoughtForm';
 
 import { QUERY_THOUGHTS } from '../utils/queries';
 
 import  PhotographerType from '../components/Photographertype' 
 import PhotoList from '../components/PhotoList'
+import ImageUpload from '../components/UploadPhoto';
 
 const Home = () => {
   const { loading, data } = useQuery(QUERY_THOUGHTS);
@@ -21,10 +22,13 @@ const Home = () => {
         >
           < PhotographerType />
         </div>
+        <div><ImageUpload/></div>
         <div className="col-12 col-md-8 mb-3">
           {loading ? (
+          
             <div>Loading...</div>
           ) : (
+          
             <PhotoList
               thoughts={thoughts}
               title="Some Feed for Thought(s)..."
