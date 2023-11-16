@@ -6,7 +6,7 @@ import { useQuery } from '@apollo/client';
 import { QUERY_THOUGHTS } from '../utils/queries';
 
 import  PhotographerType from '../components/Photographertype' 
-// import PhotoList from '../components/PhotoList'
+import PhotoList from '../components/PhotoList'
 import ImageUpload from '../components/UploadPhoto';
 
 const Home = () => {
@@ -31,7 +31,7 @@ const Home = () => {
           
             <PhotoList
               thoughts={thoughts}
-              title="Some Feed for Thought(s)..."
+              title="Photos:"
             />
           )}
         </div>

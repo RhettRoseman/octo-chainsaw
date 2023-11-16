@@ -5,7 +5,7 @@ import { useQuery } from '@apollo/client';
 // import ThoughtList from '../components/ThoughtList';
 
 import  PhotographerType from '../components/Photographertype' 
-// import PhotoList from '../components/PhotoList'
+import PhotoList from '../components/PhotoList'
 
 import { QUERY_USER, QUERY_ME } from '../utils/queries';
 
@@ -49,7 +49,7 @@ const Profile = () => {
             thoughts={user.thoughts}
             title={`${user.username}'s thoughts...`}
             showTitle={false}
-            showUsername={false}
+           
           />
         </div>
         {!userParam && (

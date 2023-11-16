@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom';
-
+const [showUsername, setShowUsername] = useState(true);
 const ThoughtList = ({
   thoughts,
   title,
@@ -7,7 +7,7 @@ const ThoughtList = ({
   showUsername = true,
 }) => {
   if (!thoughts.length) {
-    return <h3>No Thoughts Yet</h3>;
+    return <h3>No Thoughts Yet</h3>; 
   }
 
   return (
