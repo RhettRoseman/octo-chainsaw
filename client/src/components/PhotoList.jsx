@@ -1,4 +1,4 @@
-<div>
+{/* <div>
   {showTitle && <h3>{title}</h3>}
   {thoughts &&
     thoughts.map((thought) => (
@@ -39,4 +39,4 @@
         </Link>
       </div>
     ))}
-</div>
+</div> */}
