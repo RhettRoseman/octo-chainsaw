@@ -45,10 +45,7 @@ const ImageUpload = () => {
   return (
     <div>
       <h2>Upload Image</h2>
-      <div
-        className="drop-area"
-        onDrop={handleDrop}
-        onDragOver={handleDragOver}
+      <div className="drop-area" onDrop={handleDrop} onDragOver={handleDragOver}
         style={{
           width: '400px', // Set the width of the drop area
           height: '300px', // Set the height of the drop area
@@ -60,10 +57,7 @@ const ImageUpload = () => {
           margin: '20px auto', // Optional margin for centering
         }}
       >
-        <input
-          type="file"
-          accept="image/*"
-          onChange={handleFileInputChange}
+        <input type="file" accept="image/*" onChange={handleFileInputChange}
           style={{ display: 'none' }}
           id="fileInput"
         />
@@ -81,7 +75,7 @@ const ImageUpload = () => {
           />
         </div>
       )}
-      <button onClick={handleUpload}>Upload</button>
+      <button className='upload-button' onClick={handleUpload}>Upload</button>
     </div>
   );
 };
