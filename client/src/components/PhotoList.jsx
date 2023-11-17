@@ -1,15 +1,3 @@
-<<<<<<< HEAD
-
-
-
-<div>
-  {showTitle && <h3>{title}</h3>}
-  {thoughts &&
-    thoughts.map((thought) => (
-      <div key={thought._id} className="card mb-3">
-        <h4 className="card-header bg-primary text-light p-2 m-0">
-          {showUsername ? (
-=======
 import React from 'react';
 import { Link } from 'react-router-dom'; // Make sure to import Link if you're using React Router
 const showUsername = true;
@@ -48,7 +36,6 @@ const PhotoList = ({ showTitle, title, thoughts }) => {
                 />
               </div>
             )}
->>>>>>> main
             <Link
               className="btn btn-primary btn-block btn-squared"
               to={`/thoughts/${thought._id}`}
@@ -56,23 +43,10 @@ const PhotoList = ({ showTitle, title, thoughts }) => {
               Join the discussion on this thought.
             </Link>
           </div>
-<<<<<<< HEAD
-        )}
-        <Link
-          className="btn btn-primary btn-block btn-squared"
-          to={`/thoughts/${thought._id}`}
-        >
-          Join the discussion on this thought.
-        </Link>
-      </div>
-    ))}
-</div>
-=======
         ))}
     </div>
   );
 };
 
 export default PhotoList;
->>>>>>> main
 
