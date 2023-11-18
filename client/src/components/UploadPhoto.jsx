@@ -75,7 +75,7 @@ const ImageUpload = () => {
           />
         </div>
       )}
-      <button className='upload-button' onClick={handleUpload}>Upload</button>
+      <button className='upload-btn' onClick={handleUpload}>Upload</button>
     </div>
   );
 };

@@ -1,7 +1,7 @@
 const express = require('express');
 const router = express.Router();
-const signature = require('../modules/signuploadwidget');
-require('../public/js/config');
+const signature = require('..//signuploadwidget');
+require('../cloudinary/public/js/config');
 
 const cloudinary = require('cloudinary').v2
 const cloudName = cloudinary.config().cloud_name;
@@ -13,9 +13,11 @@ router.get('/', function (req, res, next) {
   res.json({
     signature: sig.signature,
     timestamp: sig.timestamp,
-    cloudname: cloudName,
-    apikey: apiKey
-  })
-})
+    cloudname: 'dfgsliya9',
+    apikey: '757232843664828',
+}
+)
+}
+)
 
 module.exports = router
