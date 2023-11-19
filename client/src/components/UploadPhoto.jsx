@@ -1,4 +1,6 @@
 import React, { useState } from 'react';
+// import SignedUpload from './signuploadform';
+
 
 const ImageUpload = () => {
   const [selectedFile, setSelectedFile] = useState(null);
@@ -44,6 +46,7 @@ const ImageUpload = () => {
 
   return (
     <div>
+      
       <h2>Upload Image</h2>
       <div className="drop-area" onDrop={handleDrop} onDragOver={handleDragOver}
         style={{
@@ -62,7 +65,9 @@ const ImageUpload = () => {
           id="fileInput"
         />
         <label htmlFor="fileInput">
-          Drag & Drop or Click to Select Image
+          Drag & Drop or Click to Chose File Image
+          {/* <SignedUpload/> */}
+        
         </label>
       </div>
       {previewImage && (
