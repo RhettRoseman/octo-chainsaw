@@ -1,16 +1,6 @@
 import React, { useState } from 'react';
-// Import your CSS file here
-// import { cloudinary } from '@cloudinary/url-gen';
-// Configure your cloud name, API key and API secret:
+// Import CSS file here
 
-const myconfig = cloudinary.config({
-    cloud_name: 'dfgsliya9', 
-    api_key: '757232843664828', 
-    api_secret: 'y29a42OcK198DuHlqcNfVZb_9NA',
-    secure: true
-  });
-  
-  exports.myconfig = myconfig;
 function SignedUpload() {
   const [formData, setFormData] = useState({}); // State to manage form data
 
@@ -58,17 +48,17 @@ function SignedUpload() {
 
   return (
     <div>
-      <h2>Upload Files Using a Form</h2>
-      <p>Perform a signed upload using a standard HTML form.</p>
-      <p>First, choose your files, then click "Upload Files" to perform a signed upload.
-        Two eager transformations are performed on the uploaded files.</p>
+      <h2>Upload Files</h2>
+      
+      <p>First, click "Chose files", then click "Upload Files" to perform a signed upload.
+        or you can drag and drop your files directly on the button</p>
 
       <form onSubmit={handleFormSubmit}>
         <input type="file" name="files[]" multiple onChange={handleFileChange} />
         <input type="submit" value="Upload Files" name="submit" className="submit" />
       </form>
 
-      <div><img id="uploaded_form" alt="Uploaded Form" /></div>
+      {/* <div><img id="uploaded_form" alt="Uploaded Form" /></div> */}
 
       <h3>Upload response:</h3>
       <pre className="data" id="formdata"></pre>
