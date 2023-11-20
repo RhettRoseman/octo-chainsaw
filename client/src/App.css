@@ -461,6 +461,7 @@ a:hover {
 /* Margin - all sides */
 .m-0 {
   margin: 0 !important;
+  color: white;
 }
 
 .m-1 {
@@ -1709,7 +1710,7 @@ label form [type='radio'] {
     align-content: center;
   }
   #log-but {
-    color: black;
+    color: white;
     text-decoration: none;
     font-size: 18px;
     font-weight: bold;
