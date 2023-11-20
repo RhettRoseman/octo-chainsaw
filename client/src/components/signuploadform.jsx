@@ -7,6 +7,9 @@ function SignedUpload() {
     e.preventDefault();
     try {
       const signResponse = await fetch('/routes/signuploadform');
+      const responseText = await signResponse.text();
+      console.log(responseText);
+      
       const signData = await signResponse.json();
       const url = "https://api.cloudinary.com/v1_1/" + signData.cloudname + "/auto/upload";
       const files = formData.files;
