@@ -1731,3 +1731,76 @@ label form [type='radio'] {
     width: 100%;
   }
 }
+
+.cloudinary-div {
+  color: white;
+  margin-top: 150px;
+  font-size: 40px;
+}
+
+/* SignedUpload.css */
+
+/* SignedUpload.css */
+
+.upload-container {
+  max-width: 1000px;
+  margin: 50px auto; /* Center the container horizontally */
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  overflow: hidden; /* Clear floats within the container */
+}
+
+h2 {
+  font-size: 30px; /* Adjusted font size for better fit */
+  margin-bottom: 16px;
+}
+
+p {
+  font-size: 15px;
+  margin-bottom: 20px;
+}
+
+.file-label,
+.upload-button {
+  background-color: #3498db;
+  color: #fff;
+  padding: 20px; /* Set the same padding for both buttons */
+  border-radius: 10px;
+  cursor: pointer;
+  display: inline-block;
+  margin-bottom: 20px; /* Add margin-bottom for space */
+  margin-left: 10px;
+}
+
+#fileInput {
+  display: none;
+}
+
+.upload-button {
+  background-color: #2ecc71;
+  color: #fff;
+  border: none;
+  font-size: 16px;
+}
+
+/* Use flexbox for better layout control */
+.button-container {
+  display: flex;
+}
+
+
+
+.response-data {
+  background-color: #f5f5f5;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  white-space: pre-wrap;
+  font-size: 14px;
+}
+
+
+
+
+

@@ -49,21 +49,34 @@ console.log('bob');
     setFormData({ files });
   };
   return (
-    <div>
-      <h2>Upload Files</h2>
-      <p>First, click “Chose files”, then click “Upload Files” to perform a signed upload.
-        or you can drag and drop your files directly on the button</p>
+    <div className="upload-container">
+      <h2>File Upload</h2>
+      <p>
+        Select files by clicking "Choose files" or drag and drop your files directly onto the button.
+        Then click "Upload Files" to perform a signed upload.
+      </p>
       <form onSubmit={handleFormSubmit}>
-        <input type="file" name="files[]" multiple onChange={handleFileChange} />
-        <input type="submit" value="Upload Files" name="submit" className="submit" />
+        <label htmlFor="fileInput" className="file-label">
+          Choose files
+        </label>
+        <input
+          type="file"
+          id="fileInput"
+          name="files[]"
+          multiple
+          onChange={handleFileChange}
+        />
+        <button type="submit" className="upload-button">
+          Upload Files
+        </button>
       </form>
       <h3>Upload response:</h3>
-      <pre className="data" id="formdata"></pre>
+      <pre className="response-data" id="formdata"></pre>
     </div>
   );
 }
-export default SignedUpload;
 
+export default SignedUpload;
 
 
 
