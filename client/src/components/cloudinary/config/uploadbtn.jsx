@@ -1,6 +1,6 @@
 import React from 'react';
 import axios from 'axios';
-import './style.css'; // Import your stylesheet
+ // Import your stylesheet
 
 const UploadWidgetComponent = () => {
   const handleUpload = async () => {

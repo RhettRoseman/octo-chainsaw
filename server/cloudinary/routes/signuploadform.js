@@ -1,6 +1,6 @@
 const express = require('express');
 const router = express.Router();
-const signature = require('../modules/signuploadform');
+const signature = require('../components/signuploadform');
 require('../public/js/config');
 
 const cloudinary = require('cloudinary').v2
