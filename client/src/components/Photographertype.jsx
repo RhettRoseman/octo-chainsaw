@@ -22,39 +22,11 @@ function PhotographerType() {
     // You can access photographerType, album, and thoughtText here
   };
 
-  return (
-    <div className="col-12 col-lg-9">
-      <form onSubmit={handleSubmit}>
-        <input
-          type="text"
-          name="photographerType"
-          placeholder="Picture"
-          value={photographerType}
-          className="form-input w-100"
-          style={{ lineHeight: '1.5' }}
-          onChange={handleChange}
-        />
-        <input
-          type="text"
-          name="album"
-          placeholder="Photographer"
-          value={album}
-          className="form-input w-100"
-          style={{ lineHeight: '1.5' }}
-          onChange={handleChange}
-        />
-        <textarea
-          name="thoughtText"
-          placeholder="Album"
-          value={thoughtText}
-          className="form-input w-100"
-          style={{ lineHeight: '1.5', }}
-          onChange={handleChange}
-        ></textarea>
-        <button type="submit">Submit</button>
-      </form>
-    </div>
-  );
+  // return (
+  //   <div className="col-12 col-lg-9">
+  //     {/* Removed the form and the dotted border */}
+  //   </div>
+  // );
 }
 
 export default PhotographerType;

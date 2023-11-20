@@ -2,7 +2,8 @@ import React, { useState } from 'react';
 // import ‘./cloudinary/config’
 // Import CSS file here
 function SignedUpload() {
-  const [formData, setFormData] = useState({}); // State to manage form data
+  const [formData, setFormData] = useState({ files: [] }); // Initialize files as an empty array
+
   const handleFormSubmit = async (e) => {
     e.preventDefault();
     try {
@@ -27,31 +28,29 @@ function SignedUpload() {
           method: "POST",
           body: uploadData
         })
-          .then((response) =>
-            response.text())
+          .then((response) => response.json()) // Parse response as JSON
           .then((data) => {
-            console.log('bobthebuilder');
-            var str = JSON.stringify(JSON.parse(data), null, 4);
-            document.getElementById("formdata").innerHTML += str;
-            console.log(JSON.parse(data));
+            console.log(data);
             // Handle response data as needed
           });
       });
       console.log('bob');
       await Promise.all(uploadPromises);
     } catch (error) {
-      console.error('Error:', error);
-      // Handle errors
+      console.error("Error during form submission:", error);
+      // Handle errors as needed
     }
   };
+
   const handleFileChange = (e) => {
     const files = e.target.files;
-    setFormData({ files });
+    setFormData({ files: Array.from(files) }); // Update files in the state
   };
   return (
     <div>
       <h2>Upload Files</h2>
-      <p>First, click “Chose files”, then click “Upload Files” to perform a signed upload.
+      
+      <p>First, click "Choose files", then click "Upload Files" to perform a signed upload.
         or you can drag and drop your files directly on the button</p>
       <form onSubmit={handleFormSubmit}>
         <input type="file" name="files[]" multiple onChange={handleFileChange} />
