@@ -15,18 +15,6 @@ function PhotographerType() {
       setThoughtText(value);
     }
   };
-
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    // Handle form submission here
-    // You can access photographerType, album, and thoughtText here
-  };
-
-  // return (
-  //   <div className="col-12 col-lg-9">
-  //     {/* Removed the form and the dotted border */}
-  //   </div>
-  // );
 }
 
 export default PhotographerType;
