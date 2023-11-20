@@ -1,7 +1,7 @@
 const express = require('express');
 const router = express.Router();
-const signature = require('../modules/signuploadform');
-require('../public/js/config');
+const signature = require('./cloudinary/modules/signuploadform.js');
+require('./config/config.js');
 
 const cloudinary = require('cloudinary').v2
 const cloudName = cloudinary.config().cloud_name;
