@@ -1714,6 +1714,8 @@ label form [type='radio'] {
     font-size: 18px;
     font-weight: bold;
     position: relative;
+    background-color: transparent;
+    border: none;
   }
   #log-but::after {
     content: '';
