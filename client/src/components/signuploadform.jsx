@@ -1,5 +1,4 @@
 import React, { useState } from 'react';
-// Import CSS file here
 
 function SignedUpload() {
   const [formData, setFormData] = useState({}); // State to manage form data
@@ -36,10 +35,6 @@ function SignedUpload() {
 
       await Promise.all(uploadPromises);
     } catch (error) {
-      console.error('Error:', erroxr);
-      // Handle errors
-    }
-  };
 
   const handleFileChange = (e) => {
     const files = e.target.files;
