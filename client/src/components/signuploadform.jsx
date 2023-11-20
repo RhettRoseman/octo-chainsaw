@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 // import './cloudinary/config'
 // Import CSS file here
+import axios from 'axios';
 
 function SignedUpload() {
   const [formData, setFormData] = useState({}); // State to manage form data
@@ -28,6 +29,20 @@ function SignedUpload() {
         uploadData.append("folder", "signed_upload_demo_form");
       }
       console.log('bobby');
+  //     axios.post(url, uploadData)
+  // .then((response) => {
+  //   // Assuming the response data is JSON, Axios automatically parses it
+  //   console.log('bobthebuilder');
+  //   var str = JSON.stringify(response.data, null, 4);
+  //   document.getElementById("formdata").innerHTML += str;
+  //   console.log(response.data);
+    
+    // Handle response data as needed
+  // })
+  // .catch((error) => {
+  //   console.error('Error:', error);
+  //   // Handle errors
+  // });
          fetch(url, {
           method: "POST",
           body: uploadData
@@ -72,5 +87,6 @@ console.log('bob');
     </div>
   );
 }
-
+  }
+}
 export default SignedUpload;
