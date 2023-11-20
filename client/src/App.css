@@ -899,7 +899,7 @@ a:hover {
 }
 
 .text-light {
-  color: black !important;
+  color: white !important;
   font-family: 'Poppins', sans-serif !important;
   text-decoration: none !important;
   text-transform: uppercase !important;
@@ -1709,7 +1709,7 @@ label form [type='radio'] {
     align-content: center;
   }
   #log-but {
-    color: black;
+    color: white;
     text-decoration: none;
     font-size: 18px;
     font-weight: bold;
