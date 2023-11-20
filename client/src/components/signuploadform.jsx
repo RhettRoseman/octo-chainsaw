@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+// import './cloudinary/config'
 // Import CSS file here
 
 function SignedUpload() {
@@ -36,7 +37,7 @@ function SignedUpload() {
 
       await Promise.all(uploadPromises);
     } catch (error) {
-      console.error('Error:', erroxr);
+      console.error('Error:', error);
       // Handle errors
     }
   };
