@@ -55,7 +55,7 @@ export const ADD_COMMENT = gql`
   }
 `;
 export const UPLOAD_IMAGE = gql`
-  mutation uploadImage($image: String!) {
+  mutation uploadImage($image: FileUpload) {
     uploadImage(image: $image) {
       id
     }

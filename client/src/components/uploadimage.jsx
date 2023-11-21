@@ -1,36 +1,30 @@
 import React, { useState } from "react";
 import { useMutation } from "@apollo/client";
 import { UPLOAD_IMAGE } from "../utils/mutations";
-
-
-
-// import gql from "graphql-tag";
-
-// const UPLOAD_IMAGE = gql`
-//   mutation uploadAvatar($avatar: Upload) {
-//     uploadAvatar(avatar: $avatar) {
-//       id
-//     }
-//   }
-// `;
+//   const [uploadImagerMutation] = useMutation(UPLOAD_IMAGE);
 
 const UploadImage = () => {
-  const [uploadImagerMutation] = useMutation(UPLOAD_IMAGE);
+  const [uploadImageMutation] = useMutation(UPLOAD_IMAGE);
   const [image, setImage] = useState(null);
-
+console.log(1)
   const handleFileChange = (e) => {
+    console.log(2)
     setImage(e.target.files[0]);
+    console.log(e.target.files[0])
   };
 
   const handleFormSubmit = (e) => {
+    console.log(4)
     e.preventDefault();
-    uploadImagerMutation({
+    console.log(5)
+    uploadImageMutation({
       variables: {
         image,
       },
-    });
+    }
+    );
   };
-
+console.log(8)
   return (
     <div className="upload-container">
       <h2>File Upload</h2>

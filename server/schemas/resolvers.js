@@ -87,6 +87,7 @@ const resolvers = {
     },
 
     uploadImage: async (parent, args, context, info) => {
+      console.log(2)
       const file = await uploadFile(args.uploadImage);
       // return saveToDatabase(file.secure_url);
       return {id:1 , image:"1"}
