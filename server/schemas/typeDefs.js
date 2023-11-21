@@ -34,7 +34,10 @@ const typeDefs = `
     thought(thoughtId: ID!): Thought
     me: User
   }
-
+type Image {
+  id: ID!
+  url: String
+}
   type Mutation {
     addUser(username: String!, email: String!, password: String!): Auth
     login(email: String!, password: String!): Auth
@@ -42,6 +45,7 @@ const typeDefs = `
     addComment(thoughtId: ID!, commentText: String!): Thought
     removeThought(thoughtId: ID!): Thought
     removeComment(thoughtId: ID!, commentId: ID!): Thought
+    uploadImage(image: String): Image!
   }
 `;
 

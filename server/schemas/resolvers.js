@@ -1,5 +1,39 @@
 const { User, Thought } = require('../models');
 const { signToken, AuthenticationError } = require('../utils/auth');
+const cloudinary = require('cloudinary');
+
+// const uploadFile = reqiure('../cloud.js')
+const uploadFile = async (file) => {
+  // The Upload scalar return a a promise
+  const { createReadStream } = await file;
+  const fileStream = createReadStream();
+
+  // Initiate Cloudinary with your credentials
+  cloudinary.v2.config({
+    cloud_name: 'dfgsliya9',
+    api_key: '757232843664828',
+    api_secret: 'y29a42OcK198DuHlqcNfVZb_9NA',
+    secure: true
+  });
+
+  // Return the Cloudinary object when it's all good
+  return new Promise((resolve, reject) => {
+    const cloudStream = cloudinary.v2.uploader.upload_stream(function (
+      err,
+      fileUploaded
+    ) {
+      // In case something hit the fan
+      if (err) {
+        rejet(err);
+      }
+
+      // All good :smile:
+      resolve(fileUploaded);
+    }); 
+
+    fileStream.pipe(cloudStream);
+  });
+};
 
 const resolvers = {
   Query: {
@@ -51,6 +85,14 @@ const resolvers = {
 
       return { token, user };
     },
+
+    uploadImage: async (parent, args, context, info) => {
+      const file = await uploadFile(args.uploadImage);
+      // return saveToDatabase(file.secure_url);
+      return {id:1 , image:"1"}
+    },
+
+
     
     // addThought: async (parent, { thoughtText }, context) => {
     //   if (context.user) {

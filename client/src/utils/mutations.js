@@ -54,9 +54,9 @@ export const ADD_COMMENT = gql`
     }
   }
 `;
-const UPLOAD_IMAGE = gql`
-  mutation uploadAvatar($avatar: Upload) {
-    uploadAvatar(avatar: $avatar) {
+export const UPLOAD_IMAGE = gql`
+  mutation uploadAvatar($image: String) {
+    uploadAvatar(image: $image) {
       id
     }
   }
