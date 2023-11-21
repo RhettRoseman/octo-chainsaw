@@ -51,7 +51,7 @@ const resolvers = {
 
       return { token, user };
     },
-
+    
     // addThought: async (parent, { thoughtText }, context) => {
     //   if (context.user) {
         

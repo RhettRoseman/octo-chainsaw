@@ -1,30 +1,40 @@
+import { parseJsonBody } from '@apollo/client/link/http/parseAndCheckHttpResponse';
 import React, { useState } from 'react';
 // import ‘./cloudinary/config’
 // Import CSS file here
 function SignedUpload() {
   const [formData, setFormData] = useState({}); // State to manage form data
+  JSON.setFormData
   const handleFormSubmit = async (e) => {
     e.preventDefault();
+    console.log('big-billy')
     try {
       const signResponse = await fetch('/routes/signuploadform');
+      console.log(8675309999)
+
       const responseText = await signResponse.text();
-      console.log(responseText);
       
-      const signData = await signResponse.json();
+      console.log(responseText);
+      const signData = JSON.parse(responseText);
+      console.log('mr mariachi')
+      
+      
       const url = "https://api.cloudinary.com/v1_1/" + signData.cloudname + "/auto/upload";
+      
       const files = formData.files;
+      
       console.log('bell');
+      
       const uploadPromises = Array.from(files).map((file) => {
         const uploadData = new FormData();
-        for (let i = 0; i < files.length; i++) {
-          let file = files[i];
+
         uploadData.append("file", file);
         uploadData.append("api_key", signData.apikey);
         uploadData.append("timestamp", signData.timestamp);
         uploadData.append("signature", signData.signature);
         uploadData.append("eager", "c_pad,h_300,w_400|c_crop,h_200,w_260");
         uploadData.append("folder", "signed_upload_demo_form");
-      }
+      
       console.log('bobby');
          fetch(url, {
           method: "POST",
