@@ -9,8 +9,8 @@ import { QUERY_THOUGHTS } from '../utils/queries';
 import  PhotographerType from '../components/Photographertype' 
 import PhotoList from '../components/PhotoList'
 // import ImageUpload from '../components/UploadPhoto';
-import SignedUpload from '../components/signuploadform';
-// import UploadImage from '../components/uploadimage';
+// import SignedUpload from '../components/signuploadform';
+
 
 const Home = () => {
   const { loading, data } = useQuery(QUERY_THOUGHTS);
