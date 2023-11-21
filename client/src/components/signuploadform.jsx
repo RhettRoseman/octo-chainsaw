@@ -1,4 +1,4 @@
-import { parseJsonBody } from '@apollo/client/link/http/parseAndCheckHttpResponse';
+// import { parseJsonBody } from '@apollo/client/link/http/parseAndCheckHttpResponse';
 import React, { useState } from 'react';
 // import ‘./cloudinary/config’
 // Import CSS file here
@@ -15,8 +15,9 @@ function SignedUpload() {
       const responseText = await signResponse.text();
       
       console.log(responseText);
-      const signData = JSON.parse(responseText);
-      console.log('mr mariachi')
+      const json = JSON.parse(responseText)
+      const signData = json
+      console.log(sign)
       
       
       const url = "https://api.cloudinary.com/v1_1/" + signData.cloudname + "/auto/upload";
