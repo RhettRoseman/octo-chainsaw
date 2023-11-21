@@ -27,7 +27,7 @@ const uploadFile = async (file) => {
 
       // All good :smile:
       resolve(fileUploaded);
-    });
+    }); 
 
     fileStream.pipe(cloudStream);
   });
